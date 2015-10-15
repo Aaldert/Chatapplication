@@ -33,5 +33,4 @@ namespace EindopdrachtServer
             Console.WriteLine(s);
         }
     }
-    }
 }

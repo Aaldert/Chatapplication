@@ -12,13 +12,14 @@ namespace Eindopdracht
 {
     public partial class Form1 : Form
     {
+        private  TcpConnection _connection;
 
-        Form f0 = new Form0();
-        private string naam;
-        public Form1(string naam)
+        public Form1(TcpConnection _connection)
         {
-            this.naam = naam;
+            this._connection = _connection;
             InitializeComponent();
+
+            _connection.IncomingChatmessageEvent += new TcpConnection.ChatmassegeDelegate(textToevoegen);
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -35,14 +36,24 @@ namespace Eindopdracht
 
         private void button1_Click(object sender, EventArgs e)
         {
-            textToevoegen();
+            if (textBox1.Text != null)
+            {
+                String data = textBox1.Text;
+                textBox1.Clear();
+                _connection.SendChatMessage(data);
+            }
         }
 
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
             if((Keys)e.KeyChar == Keys.Enter)
             {
-                textToevoegen();
+                if (textBox1.Text != null)
+                {
+                    String data = textBox1.Text;
+                    textBox1.Clear();            
+                    _connection.SendChatMessage(data);
+                }
             }
             if ((Keys)e.KeyChar == Keys.Escape)
             {
@@ -50,19 +61,21 @@ namespace Eindopdracht
             }
         }
 
-        private void textToevoegen()
+        private void textToevoegen(string[] data)
         {
-            string s = textBox1.Text;
-
-            s = s.Trim();
-            if (s == "")
+            string finalMessage = "\r\n" + data[0] + ":\t" + data[1];
+            //finalMessage = finalMessage.Trim();
+            if (finalMessage == "")
             {
                 textBox1.Clear();
             }
             else
             {
-                richTextBox1.AppendText(naam + ": " + s + "\n");
-                textBox1.Clear();
+                richTextBox1.Invoke((MethodInvoker)delegate ()
+                {
+                    richTextBox1.AppendText(finalMessage);
+                    textBox1.Clear();
+                });
             }
         }
 

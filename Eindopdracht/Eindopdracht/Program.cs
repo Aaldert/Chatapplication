@@ -16,7 +16,8 @@ namespace Eindopdracht
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form0());
+            TcpConnection tcpConnection = new TcpConnection();
+            Application.Run(new Form0(tcpConnection));
         }
     }
 }

@@ -82,12 +82,12 @@ namespace Eindopdracht
                     switch (response_parts[0])
                     {
                         case "1":   //login and display correct window after login
-                            string[] data1 = { response_parts[1] };
+                            string username = response_parts[1];
+                            this.Gebruiker = username;
                             break;
 
                         case "3":
-                            //                  sender              receiver            message
-                            string[] data2 = { response_parts[1], response_parts[2], response_parts[3] };
+                            string[] data2 = { response_parts[1],  response_parts[2] };
 
                             onIncomingChatMessage(data2);
                             break;
@@ -99,13 +99,12 @@ namespace Eindopdracht
         public void SendUsername(string username)
         {
             // send command ( cmdID | username)
-            this.Gebruiker = username;
             SendString("0|" + username + "|");
         }
 
-        public void SendChatMessage(string[] data)
+        public void SendChatMessage(string data)
         {
-            String bericht = data[0];
+            String bericht = data;
 
             // send command ( cmdID | username sender | message )
             string protocol = "2|" + this.Gebruiker + "|" + bericht;

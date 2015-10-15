@@ -19,7 +19,6 @@ namespace EindopdrachtServer
         {
             client = socket;
             networkStream = client.GetStream();
-            //_global = AppGlobal.Instance;
             Console.WriteLine("Nieuwe client connected");
             _workerThread = new Thread(recieve);
             _workerThread.Start();
@@ -38,21 +37,15 @@ namespace EindopdrachtServer
                     switch (response_parts[0])
                     {
                         case "0":   //login
-                            if (response_parts[0]!= null)
+                            if (response_parts[1]!= null)
                             {
-                                foreach (var gebruiker in Program.Gebruikers)
-                                {
-                                    if(gebruiker.username == response_parts[1])
-                                    {
-
-                                    }
-                                }
+                                username = response_parts[1];
+                                Console.WriteLine(username);
+                                sendString("1|" + username + "|");
                             }
                             break;
 
-                        case "2": //chatberichten ontvangen van gebruikers
-
-                            //controleren of het bericht wel tekens bevat
+                        case "2":
                             if (response_parts[2] != null)
                             {
                                 String message = response_parts[2];
@@ -61,7 +54,10 @@ namespace EindopdrachtServer
                                 sendString("3|" + sender + "|" + message);
                                 foreach (var gebruiker in Program.Gebruikers)
                                 {
-                                    gebruiker.sendString("3|" + sender + "|" + message);
+                                    if(gebruiker.username != sender)
+                                    {
+                                        gebruiker.sendString("3|" + sender + "|" + message);
+                                    }
                                 }
                             }
                             break;
