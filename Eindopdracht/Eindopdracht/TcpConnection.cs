@@ -105,11 +105,11 @@ namespace Eindopdracht
 
         public void SendChatMessage(string[] data)
         {
-                String bericht = data[0];
+            String bericht = data[0];
 
-                // send command ( cmdID | username sender | message )
-                string protocol = "2|" + this.Gebruiker + "|"  + bericht;
-                SendString(protocol);
+            // send command ( cmdID | username sender | message )
+            string protocol = "2|" + this.Gebruiker + "|" + bericht;
+            SendString(protocol);
 
         }
 
