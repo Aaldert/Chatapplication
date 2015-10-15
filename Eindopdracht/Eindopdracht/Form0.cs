@@ -13,7 +13,8 @@ namespace Eindopdracht
     public partial class Form0 : Form
     {
 
-        Form f1 = new Form1();
+        Form f1;
+        private string naam;
 
         public Form0()
         {
@@ -22,6 +23,8 @@ namespace Eindopdracht
 
         private void button1_MouseClick(object sender, MouseEventArgs e)
         {
+            naam = textBox1.Text;
+            f1 = new Form1(naam);
             Hide();
             f1.Show();
         }
