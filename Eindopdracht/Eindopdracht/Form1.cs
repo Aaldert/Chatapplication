@@ -17,6 +17,18 @@ namespace Eindopdracht
             InitializeComponent();
         }
 
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((Keys)e.KeyChar == Keys.Enter)
+            {
+                InitializeComponent();
+            }
+            if ((Keys)e.KeyChar == Keys.Escape)
+            {
+                Close();
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             textToevoegen();
