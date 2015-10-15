@@ -36,42 +36,18 @@ namespace Eindopdracht
 
         private void textToevoegen()
         {
-            string s = textBox2.Text;
-            bool a = false;
-            s.ToCharArray();
+            string s = textBox1.Text;
 
-
-            bool loop = true;
-
-            while (loop)
+            s = s.Trim();
+            Console.WriteLine("String is: " + s);
+            if (s == "")
             {
-                if (textBox2.Text == "")
-                {
-                    a = false;
-                }
-                foreach (char c in s)
-                {
-                    if (c.Equals(" "))
-                    {
-                        a = false;
-                    }
-                    else
-                    {
-                        a = true;
-                        loop = false;
-                    }
-
-                }
+                textBox1.Clear();
             }
-
-            if (a == false)
+            else
             {
-                textBox2.Clear();
-            }
-            if (a == true)
-            {
-                richTextBox1.AppendText(textBox2.Text + "\n");
-                textBox2.Clear();
+                richTextBox1.AppendText(s + "\n");
+                textBox1.Clear();
             }
         }
 
