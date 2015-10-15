@@ -63,16 +63,20 @@ namespace Eindopdracht
 
         private void textToevoegen(string[] data)
         {
-            string finalMessage = "\r\n" + data[0] + ":\t" + data[1];
-            //finalMessage = finalMessage.Trim();
-            if (finalMessage == "")
+            string bericht = data[1];
+            bericht = bericht.Trim();
+            if (bericht.StartsWith("\0"))
             {
-                textBox1.Clear();
+                richTextBox1.Invoke((MethodInvoker)delegate ()
+                {
+                    textBox1.Clear();
+                });
             }
             else
             {
                 richTextBox1.Invoke((MethodInvoker)delegate ()
                 {
+                    string finalMessage = "\r\n" + data[0] + ":\t" + bericht;
                     richTextBox1.AppendText(finalMessage);
                     textBox1.Clear();
                 });
