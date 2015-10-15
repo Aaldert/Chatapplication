@@ -69,14 +69,19 @@ namespace Eindopdracht
 
         private void button2_MouseClick(object sender, MouseEventArgs e)
         {
-            string alleTekst = richTextBox1.Text;
             string path;
             SaveFileDialog file = new SaveFileDialog();
             file.Filter = "txt files (*.txt)|*.txt";
             if (file.ShowDialog() == DialogResult.OK)
             {
                 path = file.FileName;
-                File.AppendAllText(path, alleTekst);
+                StreamWriter sw = File.CreateText(path);
+                for (int i = 0; i < richTextBox1.Lines.Length; i++)
+                {
+                    sw.WriteLine(richTextBox1.Lines[i]);
+                }
+                sw.Flush();
+                sw.Close();
             }
         }
     }
