@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Eindopdracht
 {
@@ -66,5 +67,17 @@ namespace Eindopdracht
             }
         }
 
+        private void button2_MouseClick(object sender, MouseEventArgs e)
+        {
+            string alleTekst = richTextBox1.Text;
+            string path;
+            SaveFileDialog file = new SaveFileDialog();
+            file.Filter = "txt files (*.txt)|*.txt";
+            if (file.ShowDialog() == DialogResult.OK)
+            {
+                path = file.FileName;
+                File.AppendAllText(path, alleTekst);
+            }
+        }
     }
 }
