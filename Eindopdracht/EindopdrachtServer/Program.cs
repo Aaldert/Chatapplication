@@ -13,7 +13,6 @@ namespace EindopdrachtServer
         static void Main(string[] args)
         {
             Console.WriteLine("Server wordt gestart.");
-            //AppGlobal.Instance.ToString();
             TcpListener serverSocket = new TcpListener(1288);
             serverSocket.Start();
 
@@ -27,9 +26,9 @@ namespace EindopdrachtServer
             Console.WriteLine("Server afsluiten");
         }
 
-        public static void RemoveClientFromList(Client client)
+        public static void verweiderGebruikersUitLijst(Client client)
         {
-            string s = "Client " + client.iduser + " with username " + client.username + " has been disconnected.";
+            string s = "Username " + client.username + " has been disconnected.";
             Gebruikers.Remove(client);
             Console.WriteLine(s);
         }

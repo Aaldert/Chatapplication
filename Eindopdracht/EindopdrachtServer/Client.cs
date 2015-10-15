@@ -12,8 +12,6 @@ namespace EindopdrachtServer
     {
         TcpClient client;
         NetworkStream networkStream;
-        //private readonly AppGlobal _global;
-        public int iduser { get; private set; }
         public string username { get; private set; }
         private Thread _workerThread;
 
@@ -22,7 +20,6 @@ namespace EindopdrachtServer
             client = socket;
             networkStream = client.GetStream();
             //_global = AppGlobal.Instance;
-            iduser = -1;
             Console.WriteLine("Nieuwe client connected");
             _workerThread = new Thread(recieve);
             _workerThread.Start();
@@ -43,8 +40,13 @@ namespace EindopdrachtServer
                         case "0":   //login
                             if (response_parts[0]!= null)
                             {
-                                String username = response_parts[1];
+                                foreach (var gebruiker in Program.Gebruikers)
+                                {
+                                    if(gebruiker.username == response_parts[1])
+                                    {
 
+                                    }
+                                }
                             }
                             break;
 
@@ -53,15 +55,13 @@ namespace EindopdrachtServer
                             //controleren of het bericht wel tekens bevat
                             if (response_parts[2] != null)
                             {
-                                String message = response_parts[3];
-                                String receiver = response_parts[2];
+                                String message = response_parts[2];
                                 String sender = response_parts[1];
 
-                                sendString("3|" + sender + "|" + receiver + "|" + message);
-                                foreach (var client in Program.Clients)
+                                sendString("3|" + sender + "|" + message);
+                                foreach (var gebruiker in Program.Gebruikers)
                                 {
-                                    if (client.username == receiver)
-                                        client.sendString("3|" + sender + "|" + receiver + "|" + message);
+                                    gebruiker.sendString("3|" + sender + "|" + message);
                                 }
                             }
                             break;
@@ -73,7 +73,7 @@ namespace EindopdrachtServer
 
         private void Stop()
         {
-            Program.RemoveClientFromList(this);
+            Program.verweiderGebruikersUitLijst(this);
             _workerThread.Abort();
         }
 
