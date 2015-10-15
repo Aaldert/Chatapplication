@@ -28,5 +28,16 @@ namespace Eindopdracht
             Hide();
             f1.Show();
         }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((Keys)e.KeyChar == Keys.Enter)
+            {
+                naam = textBox1.Text;
+                f1 = new Form1(naam);
+                f1.Show();
+                Hide();
+            }
+        }
     }
 }
