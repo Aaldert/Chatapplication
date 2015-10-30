@@ -40,13 +40,5 @@ namespace Eindopdracht
                 Hide();
             }
         }
-
-        private void pictureBox1_Paint(object sender, System.Windows.Forms.PaintEventArgs e)
-        {
-            Graphics g = e.Graphics;
-            Font font = new Font("Segoe UI", 30, FontStyle.Regular, GraphicsUnit.Pixel);
-            PointF point = new PointF(10, 10);
-            g.DrawString("gebruikersnaam", font, Brushes.Black, point);
-        }
     }
 }
