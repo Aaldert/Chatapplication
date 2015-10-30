@@ -1,0 +1,5 @@
+C:\Users\daanc_000\Documents\Chatapplication\Eindopdracht\EindopdrachtServer\bin\Debug\EindopdrachtServer.exe.config
+C:\Users\daanc_000\Documents\Chatapplication\Eindopdracht\EindopdrachtServer\bin\Debug\EindopdrachtServer.exe
+C:\Users\daanc_000\Documents\Chatapplication\Eindopdracht\EindopdrachtServer\bin\Debug\EindopdrachtServer.pdb
+C:\Users\daanc_000\Documents\Chatapplication\Eindopdracht\EindopdrachtServer\obj\Debug\EindopdrachtServer.exe
+C:\Users\daanc_000\Documents\Chatapplication\Eindopdracht\EindopdrachtServer\obj\Debug\EindopdrachtServer.pdb

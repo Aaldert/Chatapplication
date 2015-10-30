@@ -1,0 +1,10 @@
+C:\Users\daanc_000\Documents\Chatapplication\Eindopdracht\Eindopdracht\bin\Debug\Eindopdracht.exe.config
+C:\Users\daanc_000\Documents\Chatapplication\Eindopdracht\Eindopdracht\bin\Debug\Eindopdracht.exe
+C:\Users\daanc_000\Documents\Chatapplication\Eindopdracht\Eindopdracht\bin\Debug\Eindopdracht.pdb
+C:\Users\daanc_000\Documents\Chatapplication\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.csprojResolveAssemblyReference.cache
+C:\Users\daanc_000\Documents\Chatapplication\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.Form0.resources
+C:\Users\daanc_000\Documents\Chatapplication\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.Form1.resources
+C:\Users\daanc_000\Documents\Chatapplication\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.Properties.Resources.resources
+C:\Users\daanc_000\Documents\Chatapplication\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.csproj.GenerateResource.Cache
+C:\Users\daanc_000\Documents\Chatapplication\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.exe
+C:\Users\daanc_000\Documents\Chatapplication\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.pdb

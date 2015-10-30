@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Eindopdracht
 {
@@ -80,6 +81,25 @@ namespace Eindopdracht
                     richTextBox1.AppendText(finalMessage);
                     textBox1.Clear();
                 });
+            }
+        }
+
+
+        private void button2_MouseClick(object sender, MouseEventArgs e)
+        {
+            string path;
+            SaveFileDialog file = new SaveFileDialog();
+            file.Filter = "txt files (*.txt)|*.txt";
+            if (file.ShowDialog() == DialogResult.OK)
+            {
+                path = file.FileName;
+                StreamWriter sw = File.CreateText(path);
+                for (int i = 0; i < richTextBox1.Lines.Length; i++)
+                {
+                    sw.WriteLine(richTextBox1.Lines[i]);
+                }
+                sw.Flush();
+                sw.Close();
             }
         }
     }
