@@ -14,7 +14,15 @@ namespace Eindopdracht
     {
         private  TcpConnection _connection;
 
+<<<<<<< HEAD
         public Form1(TcpConnection _connection)
+=======
+        Form f0 = new Form0();
+        private string naam;
+
+
+        public Form1(string naam)
+>>>>>>> origin/GUI
         {
             this._connection = _connection;
             InitializeComponent();
@@ -82,6 +90,5 @@ namespace Eindopdracht
                 });
             }
         }
-
     }
 }

@@ -1,0 +1,29 @@
+C:\Users\tim\Desktop\Jaar 2\Periode 1\C#\eindopdracht\Eindopdracht\Eindopdracht\bin\Debug\Eindopdracht.exe.config
+C:\Users\tim\Desktop\Jaar 2\Periode 1\C#\eindopdracht\Eindopdracht\Eindopdracht\bin\Debug\Eindopdracht.exe
+C:\Users\tim\Desktop\Jaar 2\Periode 1\C#\eindopdracht\Eindopdracht\Eindopdracht\bin\Debug\Eindopdracht.pdb
+C:\Users\tim\Desktop\Jaar 2\Periode 1\C#\eindopdracht\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.csprojResolveAssemblyReference.cache
+C:\Users\tim\Desktop\Jaar 2\Periode 1\C#\eindopdracht\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.Form1.resources
+C:\Users\tim\Desktop\Jaar 2\Periode 1\C#\eindopdracht\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.Properties.Resources.resources
+C:\Users\tim\Desktop\Jaar 2\Periode 1\C#\eindopdracht\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.csproj.GenerateResource.Cache
+C:\Users\tim\Desktop\Jaar 2\Periode 1\C#\eindopdracht\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.exe
+C:\Users\tim\Desktop\Jaar 2\Periode 1\C#\eindopdracht\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.pdb
+C:\Users\tim\Source\Repos\Chatapplication\Eindopdracht\Eindopdracht\bin\Debug\Eindopdracht.exe.config
+C:\Users\tim\Source\Repos\Chatapplication\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.exe
+C:\Users\tim\Source\Repos\Chatapplication\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.pdb
+C:\Users\tim\Source\Repos\Chatapplication\Eindopdracht\Eindopdracht\bin\Debug\Eindopdracht.exe
+C:\Users\tim\Source\Repos\Chatapplication\Eindopdracht\Eindopdracht\bin\Debug\Eindopdracht.pdb
+C:\Users\tim\Source\Repos\Chatapplication\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.csprojResolveAssemblyReference.cache
+C:\Users\tim\Source\Repos\Chatapplication\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.Form1.resources
+C:\Users\tim\Source\Repos\Chatapplication\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.Properties.Resources.resources
+C:\Users\tim\Source\Repos\Chatapplication\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.csproj.GenerateResource.Cache
+C:\Users\tim\Source\Repos\Chatapplication\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.Form0.resources
+C:\Users\tim\Desktop\Jaar 2\Periode 1\C#\chatapplication\Eindopdracht\Eindopdracht\bin\Debug\Eindopdracht.exe.config
+C:\Users\tim\Desktop\Jaar 2\Periode 1\C#\chatapplication\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.exe
+C:\Users\tim\Desktop\Jaar 2\Periode 1\C#\chatapplication\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.pdb
+C:\Users\tim\Desktop\Jaar 2\Periode 1\C#\chatapplication\Eindopdracht\Eindopdracht\bin\Debug\Eindopdracht.exe
+C:\Users\tim\Desktop\Jaar 2\Periode 1\C#\chatapplication\Eindopdracht\Eindopdracht\bin\Debug\Eindopdracht.pdb
+C:\Users\tim\Desktop\Jaar 2\Periode 1\C#\chatapplication\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.csprojResolveAssemblyReference.cache
+C:\Users\tim\Desktop\Jaar 2\Periode 1\C#\chatapplication\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.Form0.resources
+C:\Users\tim\Desktop\Jaar 2\Periode 1\C#\chatapplication\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.Form1.resources
+C:\Users\tim\Desktop\Jaar 2\Periode 1\C#\chatapplication\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.Properties.Resources.resources
+C:\Users\tim\Desktop\Jaar 2\Periode 1\C#\chatapplication\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.csproj.GenerateResource.Cache
