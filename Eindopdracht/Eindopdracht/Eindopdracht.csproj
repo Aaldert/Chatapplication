@@ -96,6 +96,7 @@
     <None Include="Resources\Gebruikersnaam4.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\achtergrond1.png" />
     <Content Include="theicon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

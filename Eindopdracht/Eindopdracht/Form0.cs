@@ -48,10 +48,5 @@ namespace Eindopdracht
             PointF point = new PointF(10, 10);
             g.DrawString("gebruikersnaam", font, Brushes.Black, point);
         }
-
-        private void Form0_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

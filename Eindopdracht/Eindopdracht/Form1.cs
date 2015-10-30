@@ -66,5 +66,31 @@ namespace Eindopdracht
             }
         }
 
+
+        private void drawRectangle()
+        {
+            Bitmap drawMap = new Bitmap(500,250);
+            Graphics g = Graphics.FromImage(drawMap);
+
+            //while (true)
+            //{
+                Rectangle chatRect = new Rectangle(11, 10, 479, 202);
+                Pen pen = new Pen(Color.Red, 2);
+                g.DrawRectangle(pen, chatRect);
+            //}
+            
+
+
+
+        }
+
+       // private void pictureBox1_Paint(object sender, PaintEventArgs e)
+       // {
+       //     Rectangle chatRect = new Rectangle(11, 10, 479, 202);
+       //     using (Pen pen = new Pen(Color.Red, 2))
+       //     {
+       //         e.Graphics.DrawRectangle(pen, chatRect);
+       //     }
+       // }
     }
 }
