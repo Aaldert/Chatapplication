@@ -15,8 +15,6 @@ namespace Eindopdracht
     {
         private TcpConnection connection;
 
-        Form f1;
-
         public Form0(TcpConnection connection)
         {
             this.connection = connection;
@@ -25,26 +23,26 @@ namespace Eindopdracht
 
         private void button1_MouseClick(object sender, MouseEventArgs e)
         {
-            if(textBox1.Text != null)
-            {
-                String naam = textBox1.Text;
-                textBox1.Clear();
-                connection.SendUsername(naam);
-                f1 = new Form1(connection);
-                Hide();
-                f1.Show();
-            }
+			OpenMainForm();
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((Keys)e.KeyChar == Keys.Enter)
-            {
-                naam = textBox1.Text;
-                f1 = new Form1(naam);
-                f1.Show();
-                Hide();
-            }
+			if ((Keys)e.KeyChar == Keys.Enter)
+				OpenMainForm();
         }
+
+		private void OpenMainForm()
+		{
+			if (textBox1.Text != null)
+			{
+				String naam = textBox1.Text;
+				textBox1.Clear();
+				connection.SendUsername(naam);
+				Form main_form = new Form1(connection);
+				Hide();
+				main_form.Show();
+			}
+		}
     }
 }
