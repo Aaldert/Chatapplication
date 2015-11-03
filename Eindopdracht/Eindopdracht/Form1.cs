@@ -14,6 +14,7 @@ namespace Eindopdracht
     public partial class Form1 : Form
     {
         private  TcpConnection _connection;
+		private Boolean eerstebericht = true;
 
         public Form1(TcpConnection _connection) 
         {
@@ -66,14 +67,24 @@ namespace Eindopdracht
         {
             string bericht = data[1];
             bericht = bericht.Trim();
-            if (bericht.StartsWith("\0"))
-            {
-                richTextBox1.Invoke((MethodInvoker)delegate ()
+			if (bericht.StartsWith("\0"))
+			{
+				richTextBox1.Invoke((MethodInvoker)delegate ()
                 {
-                    textBox1.Clear();
-                });
-            }
-            else
+                  textBox1.Clear();
+				});
+		    }
+			else if (eerstebericht == true)
+			{
+				richTextBox1.Invoke((MethodInvoker)delegate ()
+				{
+					string finalMessage = data[0] + ":\t" + bericht;
+					richTextBox1.AppendText(finalMessage);
+					textBox1.Clear();
+					eerstebericht = false;
+				});
+			}
+	        else
             {
                 richTextBox1.Invoke((MethodInvoker)delegate ()
                 {
